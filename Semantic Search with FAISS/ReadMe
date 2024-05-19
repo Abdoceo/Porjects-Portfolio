@@ -1,0 +1,10 @@
+Dataset
+The dataset used in this project consists of GitHub issues and comments from the 🤗 Datasets repository.
+The dataset is preprocessed to filter out irrelevant data, such as pull requests and issues without comments.
+
+Technologies Used:
+-Python
+- Hugging Face Datasets
+- Transformers
+- FAISS
+- Sentence-Transformers
