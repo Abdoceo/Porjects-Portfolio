@@ -1,0 +1,14 @@
+End-to-End Machine Learning Project: California Housing Prices:
+
+This project demonstrates an end-to-end machine learning process using Python,
+focusing on predicting California housing prices. The project follows the typical stages of a machine learning workflow,
+including data loading, preprocessing, exploration, model training, and evaluation.
+
+Prerequisites
+Ensure you have Python ≥3.5 and Scikit-Learn ≥0.20 installed.
+Other necessary libraries include NumPy, Pandas, Matplotlib, and additional Scikit-Learn modules.
+
+This project demonstrates a comprehensive workflow for a machine learning project.
+It covers data loading, preprocessing, visualization, model training, and evaluation.
+The techniques used in this project can be applied to various datasets and machine learning problems.
+For more details and advanced topics, refer to the complete project notebook. Happy coding!
