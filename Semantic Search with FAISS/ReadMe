@@ -8,3 +8,11 @@ Technologies Used:
 - Transformers
 - FAISS
 - Sentence-Transformers
+
+Features
+- Loads GitHub issues and comments dataset using the Hugging Face Datasets library.
+- Filters out pull requests and issues with no comments.
+- Processes and preprocesses text data, including concatenation of title, body, and comments.
+- Generates embeddings for text data using a pre-trained model from the sentence-transformers library.
+- Creates a FAISS index for efficient similarity search.
+- Performs semantic search to find the most relevant comments for a given query.
