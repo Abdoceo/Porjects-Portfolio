@@ -1,0 +1,7 @@
+This project implements a custom tokenizer for code functions,specifically targeting Python code.
+It leverages the  Transformers library to train a new tokenizer based on a dataset of Python functions.
+
+Purpose:
+The pre-trained tokenizers available in  Transformers might not be optimal for handling code-specific elements 
+like function definitions, docstrings, and indentation.
+  This project addresses this by creating a tokenizer trained on a corpus of Python functions.
