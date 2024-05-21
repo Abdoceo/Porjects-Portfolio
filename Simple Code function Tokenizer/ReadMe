@@ -1,4 +1,4 @@
-This project implements a custom tokenizer for code functions,specifically targeting Python code.
+This project implements a custom Hugging face tokenizer for code functions,specifically targeting Python code.
 It leverages the  Transformers library to train a new tokenizer based on a dataset of Python functions.
 
 Purpose:
