@@ -1,3 +1,7 @@
+The project:
+This project implements a semantic search for a python fuctions using a (Facebook AI Similarity Search)
+and pre-trained sentense embeddings.
+
 Dataset
 The dataset used in this project consists of GitHub issues and comments from the 🤗 Datasets repository.
 The dataset is preprocessed to filter out irrelevant data, such as pull requests and issues without comments.
