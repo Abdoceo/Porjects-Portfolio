@@ -1,0 +1,47 @@
+USE sql_and_tableau;
+
+
+WITH CTE AS (
+
+	SELECT 	
+		ROW_NUMBER() OVER (ORDER BY student_id, track_name DESC) AS student_track_id,
+		ctse.student_id, 
+		ctse.track_id,
+		ctse.date_enrolled,
+		ctse.date_completed,
+		cti.track_name,
+        DATEDIFF(ctse.date_completed, ctse.date_enrolled) AS days_for_completion,
+        
+        
+		CASE 
+			WHEN ctse.date_completed IS NULL THEN 0
+			ELSE 1
+		END AS track_completed
+    
+	FROM 
+		career_track_student_enrollments ctse
+        JOIN career_track_info cti ON ctse.track_id = cti.track_id
+   )     
+        
+	SELECT
+		student_track_id,
+		student_id,
+		track_name,
+		date_enrolled,
+		track_completed,
+		days_for_completion,
+        
+		CASE 
+			WHEN days_for_completion = 0 THEN ' same day'
+			WHEN days_for_completion BETWEEN 1 AND 7 THEN '1 TO 7 days'
+			WHEN days_for_completion BETWEEN 8 AND 30 THEN '8 TO 30 days'
+			WHEN days_for_completion BETWEEN 31 AND 60 THEN '31 TO 60 days'
+			WHEN days_for_completion BETWEEN 61 AND 90 THEN '61 TO 90 days'
+			WHEN days_for_completion BETWEEN 91 AND 365 THEN '91 TO 365 days'
+			WHEN days_for_completion > 365 THEN 'more extensive than 365 days'
+		END AS completion_bucket
+        
+	FROM CTE;
+    
+    
+
