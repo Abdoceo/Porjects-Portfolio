@@ -1,0 +1,17 @@
+Career Track Analysis SQL Script
+This SQL script is designed to analyze the completion times of various career tracks. It calculates the number of days taken to complete each track and categorizes them into different completion buckets. The script also identifies whether a track has been completed or not.
+
+Key Features:
+Row Number Assignment: Assigns a unique identifier to each student-track combination using the ROW_NUMBER() function.
+
+Date Difference Calculation: Calculates the number of days between the enrollment and completion dates using the DATEDIFF() function.
+
+Completion Status: Determines whether a track has been completed using a CASE statement.
+
+Completion Buckets: Categorizes the completion times into predefined buckets (e.g., same day, 1 to 7 days, 8 to 30 days, etc.) for better analysis.
+
+Tableau Visualization:
+Explore the interactive dashboard created using Tableau to visualize the analysis results. 
+The dashboard includes various charts and filters to help you understand the completion patterns of different career tracks.
+Link: 
+https://public.tableau.com/app/profile/abdelrahman.suliman/viz/career-track-analysis_17319499356920/Dashboard1
