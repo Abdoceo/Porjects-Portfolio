@@ -1,0 +1,35 @@
+# Music Genre Classification with PCA and Logistic Regression
+
+## Project Overview
+In this project, we aim to predict music genres using a dataset containing various musical features extracted from tracks across different styles.
+The primary task is to predict the genres of unlabeled tracks by employing Principal Component Analysis (PCA) to reduce the dimensionality of the dataset and then 
+using Logistic Regression for classification.
+
+## Objectives
+- Apply PCA to reduce the dimensionality of the dataset.
+- Train and evaluate a Logistic Regression classifier using PCA-transformed features.
+- Compare the performance of the classifier with and without PCA.
+- Predict unknown genres in the dataset and fill in the missing genre information.
+
+## Dataset
+The dataset contains various musical features extracted from tracks across different genres. 
+A significant portion of the records lacks specific genre information, which we aim to predict.
+
+## Project Steps
+1. **Data Exploration**: Load and explore the dataset to understand its structure and contents.
+2. **Correlation Analysis**: Analyze the correlation between features to identify highly correlated pairs.
+3. **PCA for Dimensionality Reduction**: Apply PCA to reduce the dimensionality of the dataset while retaining 95% of the variance.
+4. **Evaluating Classification Efficacy**: Train and evaluate a Logistic Regression classifier using PCA-transformed features and compare it with the classifier trained on original features.
+5. **Genre Prediction and Integration**: Use the more effective model to predict unknown genres and fill in the missing genre information in the original DataFrame.
+
+## Results
+- The PCA-transformed model achieved an accuracy of 0.534.
+- The original features model achieved a higher accuracy, indicating better performance without PCA.
+
+## Conclusion
+This project demonstrates the application of PCA for dimensionality reduction and Logistic Regression for classification. 
+  By comparing the performance of models with and without PCA, we can determine the effectiveness of dimensionality reduction in improving model performance.
+
+## Requirements
+- Python 3 or newer
+- Libraries: pandas, numpy, matplotlib, scipy, scikit-learn, seaborn
