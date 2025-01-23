@@ -1,4 +1,5 @@
-## **Saudi Coins Detection and Classification**
+### **Saudi Coins Detection and Classification**
+
 
 This project involves detecting and classifying Saudi coins in an image using OpenCV. The program utilizes circle detection, brightness analysis, and radius measurement to annotate coins and calculate their total value.
 
