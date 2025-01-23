@@ -109,19 +109,9 @@ When you run the script on an image, you will see:
 
 ---
 
-## License
-This project is open-source and available under the MIT License.
-
----
-
 ## Acknowledgements
 - OpenCV library for image processing.
 - NumPy for numerical computations.
 
 ---
-
-## Contact
-For questions or suggestions, feel free to reach out to:
-- **Email:** your-email@example.com
-- **GitHub:** [Your GitHub Profile](https://github.com/yourprofile)
 
