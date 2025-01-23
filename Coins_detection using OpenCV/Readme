@@ -1,0 +1,127 @@
+# Coin Detection and Classification
+
+This project involves detecting and classifying Saudi coins in an image using OpenCV. The program utilizes circle detection, brightness analysis, and radius measurement to annotate coins and calculate their total value.
+
+---
+
+## Features
+- Detect coins in an image using the Hough Circle Transform.
+- Calculate the average brightness of each detected coin.
+- Measure the radius of each detected coin.
+- Classify coins based on brightness and radius ranges.
+- Annotate coins with their values in Riyals or halalas.
+- Calculate and display the total value of the coins in the image.
+
+---
+
+## Installation
+1. Clone the repository or download the code files.
+2. Ensure you have Python 3.x installed on your system.
+3. Install the required libraries using pip:
+   ```bash
+   pip install opencv-python numpy
+   ```
+
+---
+
+## Usage
+1. Place your image file in the same directory as the script and name it `saudi coins.jpg` (or update the filename in the script).
+2. Run the script:
+   ```bash
+   python coin_detection.py
+   ```
+3. The program will:
+   - Detect circles in the image.
+   - Calculate brightness and radius for each detected circle.
+   - Annotate each coin with its value.
+   - Display the total value of all coins in Riyals.
+4. The output image with annotations will be displayed. Close the window to exit the program.
+
+---
+
+## How It Works
+1. **Preprocessing:**
+   - The image is converted to grayscale.
+   - Gaussian blur is applied to reduce noise and improve edge detection.
+
+2. **Circle Detection:**
+   - The `cv2.HoughCircles` function detects circular shapes representing coins.
+
+3. **Brightness and Radius Measurement:**
+   - The average brightness of a square region around each circle is calculated.
+   - The radius of each circle is extracted.
+
+4. **Classification:**
+   - Coins are classified dynamically based on brightness and radius ranges.
+
+5. **Annotation:**
+   - Each coin is annotated with its value in Riyals or halalas.
+   - The total value of all coins is calculated and displayed on the image.
+
+---
+
+## Example Output
+When you run the script on an image, you will see:
+- Detected coins outlined with circles.
+- Annotated values (e.g., `1 Riyal`, `2 Riyal`, `50h`).
+- Total value displayed at the top left corner of the image.
+
+---
+
+## Customization
+1. **Adjust Brightness and Radius Ranges:**
+   Modify the ranges in the code to adapt to different coin sets or lighting conditions.
+   ```python
+   brightness_range = {...}
+   radius_range = {...}
+   ```
+
+2. **Change Image:**
+   Replace `saudi coins.jpg` with another image containing coins.
+
+3. **Update Circle Detection Parameters:**
+   Tweak parameters in the `cv2.HoughCircles` function to improve detection:
+   ```python
+   minDist, param1, param2, minRadius, maxRadius
+   ```
+
+---
+
+## Dependencies
+- Python 3.x
+- OpenCV
+- NumPy
+
+---
+
+## Limitations
+- Detection accuracy depends on the quality and lighting of the input image.
+- Overlapping coins may not be detected correctly.
+- Fixed brightness and radius thresholds may require adjustment for different coin sets.
+
+---
+
+## Future Improvements
+- Implement dynamic thresholding for brightness and radius ranges.
+- Handle overlapping coins using advanced segmentation techniques.
+- Add support for video streams to detect coins in real-time.
+- Enhance annotation with a legend for better visualization.
+
+---
+
+## License
+This project is open-source and available under the MIT License.
+
+---
+
+## Acknowledgements
+- OpenCV library for image processing.
+- NumPy for numerical computations.
+
+---
+
+## Contact
+For questions or suggestions, feel free to reach out to:
+- **Email:** your-email@example.com
+- **GitHub:** [Your GitHub Profile](https://github.com/yourprofile)
+
