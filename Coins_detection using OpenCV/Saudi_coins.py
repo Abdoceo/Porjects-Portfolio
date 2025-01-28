@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread('saudi coins.jpg')
+image = cv2.imread('saudi_coins.jpg')
 if image is None:
     print("Error: Image not found.")
     exit()
@@ -66,9 +66,29 @@ if circles is not None:
     print("Brightness values:", brightness)
 
 
+  # Assign values based on conditions
+values = []
+for a, b in zip(brightness, radii):  # a = brightness, b = radius
+    if 140  <= b and 105 > a > 100:  # Large & bright
+        values.append(200)  # 2 Riyals [a 104 b 140 ]
+    elif 100 < b <= 120 and 120 < a <= 145:  # Large coins with medium brightness
+        values.append(10)  # 10 halalas
+    elif 140 < b >= 134 and a >= 110  :  # Medium coins with very low brightness
+        values.append(50)  # 50 halalas [a 141 and 110] ] [b 145 and 134] 
+    elif 120 <= b <= 135 and 120 < a <= 140:  # Medium coins with low brightness
+        values.append(100)  # 1 Riyal
+    elif b < 115 and a > 140:  # Small & bright
+        values.append(5)  # 5 Halalas
+    elif 115 < b <= 130 and 110 < a <= 145:  # Small & dim
+        values.append(25)  # 25 Halalas
+    else:
+        values.append(50)  # Fallback for unexpected cases
 
-# Assign fixed values for coins based on their order in the circles array
-values = [200, 50, 10, 100, 25, 5, 50, 10, 25, 5]  # Values in halala
+
+
+    print("Radii of circles:", radii)
+    print("Brightness values:", brightness)
+    print("Assigned values:", values)
 
 # Annotate the image with values and total
 count_2 = 0
