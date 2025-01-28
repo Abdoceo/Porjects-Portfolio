@@ -1,4 +1,4 @@
-# Saudi Coin Value Counter with OpenCV
+# Saudi Coin detector and Counter with OpenCV
 
 This Python code utilizes OpenCV to detect and analyze Saudi coins in an image (`saudi_coins.jpg`) and estimate their value based on brightness and radius measurements.
 
