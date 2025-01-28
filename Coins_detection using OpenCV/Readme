@@ -1,44 +1,40 @@
-**Saudi Coin Value Counter with OpenCV** 
+# Saudi Coin Value Counter with OpenCV
 
+This Python code utilizes OpenCV to detect and analyze Saudi coins in an image (`saudi_coins.jpg`) and estimate their value based on brightness and radius measurements.
 
-This Python code utilizes OpenCV to detect and analyze Saudi coins in an image (saudi_coins.jpg)
-and estimate their value based on brightness and radius measurements.
+**How it Works:**
 
-How it Works:
+1. **Image Loading:** Loads the image named `saudi_coins.jpg`.
+2. **Preprocessing:**
+   - Converts the image to grayscale for better circle detection.
+   - Applies a Gaussian blur to reduce noise and improve circle detection accuracy.
+3. **Circle Detection:** Uses Hough Circle Transform to identify circular objects (coins) in the image.
+4. **Value Assignment:**
+   - Calculates the average brightness within a defined area around each detected circle.
+   - Assigns coin values based on conditions defined by brightness and radius ranges (you can modify these conditions based on your coin data).
+5. **Annotation and Display:**
+   - Draws the detected circles on the image.
+   - Annotates each circle with its estimated value.
+   - Displays the total value of all detected coins.
 
-Image Loading: Loads the image named saudi_coins.jpg.
+**Requirements:**
 
-*Preprocessing:*
+* OpenCV library (installation: `pip install opencv-python`)
+* NumPy library (usually included with OpenCV installation)
 
-Converts the image to grayscale for better circle detection.
-Applies a Gaussian blur to reduce noise and improve circle detection accuracy.
-Circle Detection: Uses Hough Circle Transform to identify circular objects (coins) in the image.
+**Running the Script:**
 
-*Value Assignment:*
-Calculates the average brightness within a defined area around each detected circle.
-Assigns coin values based on conditions defined by brightness and radius ranges 
-(you can modify these conditions based on your coin data).
+1. Save the code as a Python file (e.g., `saudi_coin_counter.py`).
+2. Ensure you have `saudi_coins.jpg` in the same directory.
+3. Run the script from your terminal: `python saudi_coin_counter.py`
 
-Annotation and Display:
-Draws the detected circles on the image.
-Annotates each circle with its estimated value.
-Displays the total value of all detected coins.
-Requirements:
+**Note:**
 
-OpenCV library (installation: pip install opencv-python)
-NumPy library (usually included with OpenCV installation)
-Running the Script:
+* The current value assignment conditions might need adjustments based on the quality and variations in your coin image.
+* This is a basic implementation and can be further enhanced with error handling and more robust value assignment logic.
 
-Save the code as a Python file (e.g., saudi_coin_counter.py).
-Ensure you have saudi_coins.jpg in the same directory.
-Run the script from your terminal: python saudi_coin_counter.py
-Note:
+**Further Enhancements:**
 
-The current value assignment conditions might need adjustments based on the quality and variations in your coin image.
-This is a basic implementation and can be further enhanced with error handling and more robust value assignment logic.
-Further Enhancements:
-
-Implement error handling for cases where the image is not found.
-Refine the value assignment conditions based on a larger dataset of coins.
-Explore more sophisticated image segmentation techniques for better coin separation.
-I hope this README file provides a clear explanation of your code!
+* Implement error handling for cases where the image is not found.
+* Refine the value assignment conditions based on a larger dataset of coins.
+* Explore more sophisticated image segmentation techniques for better coin separation.
