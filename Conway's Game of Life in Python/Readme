@@ -1,0 +1,18 @@
+🔹 Introduction
+This is a Python implementation of Conway’s Game of Life, a famous cellular automaton. It follows simple rules to simulate the evolution of cells on a grid, creating fascinating patterns over time.
+
+🔹 Features
+✅ Object-oriented design with a GameOfLife class
+✅ Supports custom grid sizes
+✅ Allows users to populate the grid with initial live cells
+✅ Simulates multiple steps of the game
+✅ Graphical visualization using matplotlib
+
+🔹 How It Works
+1- Each cell is either alive (1) or dead (0).
+2- The next state of the grid follows these rules:
+- A live cell survives if it has 2 or 3 live neighbors.
+- A dead cell comes to life if it has exactly 3 live neighbors.
+- Otherwise, the cell dies or stays dead.
+
+This project is open-source under the MIT License.
