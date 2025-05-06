@@ -1,0 +1,10 @@
+The Guessing Game is a simple Python-based interactive game where the user tries to guess the number of occurrences
+of a randomly selected letter in a given text.
+The game provides hints to guide the player toward the correct answer.
+
+Features:
+- Randomly selects a letter from a predefined list.
+- Asks the user to guess how many times the letter appeared in the text.
+- Provides dynamic hints based on how close the guess is.
+- Keeps track of the number of attempts.
+- Ensures valid input handling (prevents non-integer entries.
