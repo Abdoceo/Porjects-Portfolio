@@ -1,0 +1,34 @@
+#RAG-Powered Course Tutor System
+
+##Project Overview
+This repository implements a Retrieval-Augmented Generation (RAG) pipeline designed to serve as an intelligent tutor for educational content. The system processes course transcripts, indexes them into a vector database, and leverages a local Large Language Model (LLM) to provide context-accurate answers to student inquiries based strictly on the provided syllabus.
+
+##Tech Stack
+- Orchestration: LangChain (LCEL)
+- Vector Database: ChromaDB
+- Embeddings: HuggingFace all-MiniLM-L6-v2
+- Inference: microsoft/phi-3-mini-4k-instruct (via Transformers)
+- Document Processing: PyPDF & Markdown Header Splitting
+
+
+##System Architecture
+1. Ingestion & Pre-processing
+Structural Splitting: Uses MarkdownHeaderTextSplitter to maintain document hierarchy and metadata.
+Recursive Chunking: Implements TokenTextSplitter to ensure chunks align with model context window limits (500 tokens with 50-token overlap).
+2. Retrieval Strategy
+Vectorization: Documents are embedded into a high-dimensional space for semantic search.
+MMR (Maximum Marginal Relevance): The retriever is configured with search_type="mmr" and lambda_mult=0.7 to balance relevance with information diversity, reducing redundancy in the retrieved context.
+3. Generation Chain (LCEL)
+Query Rephrasing: A dedicated prompt clarifies student questions before retrieval.
+Context Injection: The LLM is constrained via a system prompt to act as a Teaching Assistant, preventing hallucinations by restricting answers to the retrieved snippets.
+Streaming: Supports real-time token streaming for a better user experience.
+
+
+##Installation & Setup
+pip install langchain langchain-community pypdf chromadb transformers sentence-transformers langchain_huggingface
+
+
+##How to Use
+Load Data: Place your course PDF in the workspace.
+Initialize Vector Store: Run the embedding cells to create the ./vector_db directory.
+Query: Use the chain_retrieving object to pass a dictionary containing the student's question metadata.
