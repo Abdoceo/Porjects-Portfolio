@@ -1,1 +1,23 @@
+# Advanced Search Multi-Agents Project
+
+## Project Overview
+The Advanced Search Multi-Agents project is designed to enhance search capabilities by utilizing a multi-agent architecture. This system incorporates various intelligent agents that work collaboratively to fetch and analyze data, providing users with an efficient and powerful search experience.
+
+## Features
+- **Multi-Agent Architecture**: Utilizes multiple agents to perform search tasks in parallel, increasing efficiency.
+- **User-Friendly Interface**: A simple and intuitive interface that allows users to interact with the search system easily.
+- **Customizable Configuration**: Users can configure various parameters to tailor the search experience to their preferences.
+- **Scalability**: The system can scale with the increase in data and user requests.
+- **Comprehensive Reporting**: Generates detailed reports based on search queries and results.
+
+## Architecture
+The architecture of the Advanced Search Multi-Agents system consists of the following components:
+- **User Interface**: Frontend where users input their search queries.
+- **Agent Framework**: Core system managing the lifecycle and communication of agents.
+- **Data Sources**: Various databases and APIs that agents pull information from.
+- **Analysis Module**: Processes and analyzes the data retrieved by agents.
+
+
+
+
 
