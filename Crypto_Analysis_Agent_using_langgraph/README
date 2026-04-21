@@ -1,0 +1,70 @@
+# Crypto Market Analyst Agent with LangGraph
+
+🚀 **Overview**
+This project demonstrates how to build an intelligent crypto market analysis agent using the **LangGraph** framework and **LangChain** ecosystem. The agent can answer questions about cryptocurrencies, fetch real-time coin data, and deliver recent news—leveraging external APIs and LLM tool integrations.
+
+---
+
+## 🛠️ What We Built
+
+### LLM-Powered Agent
+A conversational agent steered by an LLM (OpenAI GPT-4), with custom instructions as a system prompt.
+
+### Tool Integration
+Connected three tools via APIs:
+- **crypto_list_tool**: Fetches a concise list of cryptocurrencies.
+- **crypto_data_tool**: Retrieves up-to-date price and market data for a specified crypto symbol.
+- **crypto_news_tool**: Gets current news headlines relevant to a given crypto query.
+
+### LangGraph Workflow
+Designed a stateful, multi-turn agent using LangGraph's `StateGraph`, including:
+- Nodes (assistant and tools)
+- Edge control (conditional routing)
+- Optional check-pointers for multi-turn interactions
+
+---
+
+## ✨ Skills Practiced & Learned
+
+### LangChain & LangGraph
+- Orchestrate LLM tool use and decision-making inside a graph-based agent flow.
+
+### Tool Binding & Invocation
+- Link external APIs and tools to enhance LLM responses using LangChain's tool decorators.
+
+### Prompt Engineering
+- Develop clear, structured system prompts for professional, helpful, and trustworthy agent behavior.
+
+### Stateful Agent Design
+- Harness context retention across conversation turns, including conditional tool invocation.
+
+### API Integration
+- Use Python's `requests` library and external packages (like NewsAPI) to fetch live data.
+
+### Code Organization
+- Modular function-based structure, keeping logic readable and maintainable.
+
+---
+
+## 🏗️ How It Works
+
+1. **User asks a question** about cryptocurrencies or market trends.
+2. **Agent uses LLM** with system prompt to reason step-by-step.
+3. **If data or news is needed**, agent routes the request to the appropriate tool.
+4. **Tools fetch data** from crypto and news APIs.
+5. **Agent summarizes results** with sections such as:
+   - **Summary**: High-level insights
+   - **Data**: Real-time market information
+   - **Context**: Historical or relevant background
+   - **Next Steps**: Recommendations or follow-up actions
+
+---
+
+## 🧰 Requirements & Setup
+
+### Prerequisites
+- **Python 3.8+**
+- **OpenAI API Key** (for Gemini access)
+- **NewsAPI Key** (free tier available at [newsapi.org](https://newsapi.org))
+- **FreeCryptoAPI** access (or similar crypto data provider)
+
