@@ -1,0 +1,14 @@
+[project]
+name = "cryptoagent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipython>=9.10.1",
+    "langchain>=1.2.15",
+    "langchain-google-genai>=4.2.2",
+    "langgraph>=1.1.8",
+    "newsapi-python>=0.2.7",
+    "python-dotenv>=1.2.2",
+]
